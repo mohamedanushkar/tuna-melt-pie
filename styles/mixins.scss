@@ -1,0 +1,72 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint==xxl {
+    @media only screen and (max-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xl {
+    @media only screen and (max-width: 1566px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==l {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==m {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==s {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xs {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  padding: 0px 30px;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  @include respond(s) {
+    padding: 0px 13px;
+  }
+}
+
+@mixin onethirdgrid() {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 12px;
+  grid-row-gap: 0px;
+
+  @include respond(s) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@mixin paragraph {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+
+  @include respond(s) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
