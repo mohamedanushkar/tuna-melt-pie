@@ -6,6 +6,8 @@ export default function Home() {
   return (
     <div>
       <Hero />
+
+      <h1>Come back later, it's not ready yet</h1>
     </div>
   );
 }
