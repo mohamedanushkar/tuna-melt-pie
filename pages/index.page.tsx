@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <Hero />
 
-      <h1>Come back later, it's not ready yet</h1>
+      <h1>Come back later, it&apos;s not ready yet</h1>
     </div>
   );
 }
