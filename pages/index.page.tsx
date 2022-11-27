@@ -1,13 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import Hero from "@components/hero/hero";
+import { NextPage } from "next";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <div>
       <Hero />
-
-      <h1>Come back later, it&apos;s not ready yet</h1>
     </div>
   );
-}
+};
+
+export default Home;
