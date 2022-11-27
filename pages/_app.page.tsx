@@ -4,6 +4,7 @@ import "styles/globals.css";
 import localFont from "@next/font/local";
 import { Harmattan } from "@next/font/google";
 import cns from "classnames";
+import styles from "./home.module.scss";
 
 const myFont = localFont({
   src: [{ path: "../public/fonts/hv-cocktail-regular.woff2", weight: "400" }],
@@ -14,7 +15,7 @@ const inter = Harmattan({ weight: "400", variable: "--harmattan" });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={cns(inter.variable, myFont.variable, "bg-shade3")}>
+    <main className={cns(inter.variable, myFont.variable, "bg")}>
       <div className="noise"></div>
       <Component {...pageProps} />
     </main>

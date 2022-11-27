@@ -2,22 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.bg {
   overflow: hidden;
+  position: relative;
 }
-
 .noise {
   position: absolute;
   top: -500px;
   right: -500px;
   bottom: -500px;
   left: -500px;
-  background: transparent
-    url(https://www.dropbox.com/s/h7ab1c82ctzy83n/noise.png?raw=1) 0 0;
+  background: transparent url(./../public/Grain.png) 0 0;
   background-size: 320px 320px;
   opacity: 0.35;
-  animation: noise 1s steps(8, end) infinite both;
+  animation: noise 5s steps(8, end) infinite both;
   pointer-events: none;
+  -webkit-animation: noise 5s steps(8, end) infinite both;
 }
 
 @keyframes noise {
