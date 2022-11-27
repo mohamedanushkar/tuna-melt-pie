@@ -29,6 +29,49 @@ module.exports = {
       coktail: ["var(--coktail)", "sans-serif"],
       harmattan: ["var(--harmattan)", "serif"],
     },
+    fontSize: {
+      "1xl": [
+        "1.25rem",
+        {
+          lineHeight: "2rem",
+          letterSpacing: "-0.01em",
+          fontWeight: "500",
+        },
+      ],
+      "2xl": [
+        "1.563rem",
+        {
+          lineHeight: "2rem",
+          letterSpacing: "-0.01em",
+          fontWeight: "500",
+        },
+      ],
+      "3xl": [
+        "1.953rem",
+        {
+          lineHeight: "2.25rem",
+          letterSpacing: "-0.02em",
+          fontWeight: "700",
+        },
+      ],
+      "4xl": [
+        "2.441rem",
+        {
+          lineHeight: "2.25rem",
+          letterSpacing: "-0.02em",
+          fontWeight: "700",
+        },
+      ],
+      "5xl": [
+        "4.052rem",
+        {
+          lineHeight: "2.25rem",
+          letterSpacing: "-0.02em",
+          fontWeight: "700",
+        },
+      ],
+      "6xl": ["6.875rem"],
+    },
     extend: {
       spacing: {
         128: "32rem",
@@ -37,15 +80,12 @@ module.exports = {
       borderRadius: {
         "4xl": "2rem",
       },
-      fontSize: {
-        "6xl": "9rem",
-      },
     },
   },
   plugins: [
     plugin(function ({ addBase, config }) {
       addBase({
-        h1: { fontSize: config("theme.fontSize.6xl"), lineHeight: "80%" },
+        h1: { fontSize: config("theme.fontSize.5xl"), lineHeight: "80%" },
         h2: { fontSize: config("theme.fontSize.xl") },
         h3: { fontSize: config("theme.fontSize.lg") },
       });
